@@ -317,6 +317,11 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
                 $timeout.cancel(transitionTimeout);
                 transitionTimeout = null;
               }
+              
+              if (positionTimeout) {
+                $timeout.cancel(positionTimeout);
+                positionTimeout = null;
+              }
             }
 
             function createTooltip() {
